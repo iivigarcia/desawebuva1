@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sobre mí</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #f8f9fa, #e9ecef);
+      color: #333;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      display: flex;
+      flex-direction: row;
+      gap: 30px;
+      padding: 40px;
+      align-items: center;
+    }
+
+    .photo {
+      flex: 1;
+      text-align: center;
+    }
+
+    .photo img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid #dee2e6;
+    }
+
+    .info {
+      flex: 2;
+    }
+
+    .info h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+      color: #0d6efd;
+    }
+
+    .info p {
+      line-height: 1.8;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+    nav ul {
+        display: flex;
+        list-style: none;
+        gap: 15px;
+        justify-content: center;
+        padding: 10px;
+        background: #eee;
+    }
+    nav a {
+        text-decoration: none;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .photo img {
+        width: 180px;
+        height: 180px;
+      }
+
+      .info h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+    <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="avisos.html">Avisos</a></li>
+          <li><a href="sobre-mi.html">Sobre mí</a></li>
+          <li><a href="materias-2025.html">Materias 2025</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container">
+        
+        <div class="photo">
+        <img src="ivan_garcia.jpg" alt="Ivan" />
+        </div>
+        <div class="info">
+        <h1>Hola, soy Ivan</h1>
+        <p>
+            Nací en Adrogué, y desde chico me gustaban mucho las computadoras y todo lo relacionado con la tecnología.
+            Siempre fui curioso y me encantaba desarmar cosas para ver cómo funcionaban (a veces sin saber como volver a armarlas).
+        </p>
+        <p>
+            Con el tiempo, descubrí el mundo de la electrónica, el cual me apasionaba y le dediqué 4 años en la Facultad de Ingeniería de Buenos Aires.
+            Durante ese período tuve materias relacionadas a la programación y por medios autodidactas intentaba desarrollar pequeños proyectos en mi tiempo libre.
+        </p>
+        <p>
+            Durante el 2022, hice un cambio de carrera para estudiar Ingeniería Informática en UADE.
+        </p>
+        <p>
+            Me interesan temas como la inteligencia artificial, el análisis de datos, el desarrollo web y cómo la tecnología puede ayudarnos en la vida diaria, por ejemplo con IoT.
+        </p>
+        <p>
+            Elegí estudiar Ingeniería en Informática porque sentí que era la carrera que me permitía avanzar mucho en cada proyecto.
+            Me motivó la posibilidad de crear cosas desde cero y tener un impacto real en el mundo.
+        </p>
+        <p>
+            Actualmente estoy aprendiendo sobre desarrollo cloud con google GCP y desarrollo de automatizaciones.
+            Me gusta trabajar en equipo, pero también disfruto los desafíos individuales que me hacen crecer.
+        </p>
+        <p>
+            En mi tiempo libre, me gusta correr en karting, deporte que práctico regularmente en torneos amateur.
+        </p>
+        </div>
+    </div>
+
+</body>
+</html>
