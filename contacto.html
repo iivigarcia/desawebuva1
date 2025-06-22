@@ -87,19 +87,53 @@
 
   <div class="container">
     <h1>Formulario de Contacto</h1>
-    <form action="#" method="post">
+    <form id="form-contacto" action="#" method="post">
       <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" required>
+      <input type="text" id="nombre" name="nombre" class="input-form" required>
 
       <label for="email">Correo electrónico:</label>
-      <input type="email" id="email" name="email" required>
+      <input type="email" id="email" name="email" class="input-form" required>
 
       <label for="mensaje">Mensaje:</label>
-      <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+      <textarea id="mensaje" name="mensaje" class="input-form" rows="5" required></textarea>
 
       <input type="submit" value="Enviar">
     </form>
   </div>
+
+  <script>
+    document.getElementById('form-contacto').addEventListener('submit', function(event) {
+      event.preventDefault();
+      const nombre = document.getElementById('nombre').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const mensaje = document.getElementById('mensaje').value.trim();
+      let errores = [];
+
+      // Validación de nombre
+      if (nombre.length < 2) {
+        errores.push('El nombre debe tener al menos 2 caracteres.');
+      }
+      // Validación de email
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      if (!emailRegex.test(email)) {
+        errores.push('Ingrese un correo electrónico válido.');
+      }
+      // Validación de mensaje
+      if (mensaje.length < 5) {
+        errores.push('El mensaje debe tener al menos 5 caracteres.');
+      }
+
+      if (errores.length > 0) {
+        alert('Por favor corrija lo siguiente:\n' + errores.join('\n'));
+        return;
+      }
+
+      // Si todo está bien
+      alert(`Gracias por su contacto, ${nombre}!\nEn breve le estaré respondiendo.`);
+      // Opcional: limpiar el formulario
+      event.target.reset();
+    });
+  </script>
 
 </body>
 </html>
