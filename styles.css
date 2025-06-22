@@ -1,0 +1,347 @@
+/* Estilos globales para el sitio */
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f8f9fa, #e9ecef);
+  color: #333;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+  justify-content: center;
+  padding: 10px;
+  background: #eee;
+  border-radius: 12px;
+  margin-bottom: 0;
+}
+nav a {
+  text-decoration: none;
+  color: #0d6efd;
+  padding: 6px 16px;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+nav a:hover, nav a:focus {
+  background: #e3e6ed;
+  color: #2563eb;
+}
+
+.container {
+  max-width: 900px;
+  margin: 50px auto;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 40px;
+}
+
+h1 {
+  color: #0d6efd;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+h2 {
+  color: #343a40;
+  margin-top: 30px;
+}
+h3 {
+  color: #343a40;
+}
+
+label {
+  display: block;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+input[type="submit"]:hover {
+  background-color: #0b5ed7;
+}
+
+ul {
+  font-size: 1.1rem;
+  padding-left: 20px;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .container { padding: 20px; }
+  h1 { font-size: 2rem; }
+  .photo img { width: 180px; height: 180px; }
+}
+
+/* Sobre mí foto */
+.photo {
+  flex: 1;
+  text-align: center;
+  background: #f8f9fa;
+  border-radius: 16px;
+  padding: 24px 0;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: box-shadow 0.3s;
+}
+.photo img {
+  width: 220px;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #dee2e6;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.photo img:hover {
+  transform: scale(1.05) rotate(-2deg);
+  box-shadow: 0 4px 24px rgba(13,110,253,0.15);
+}
+.info {
+  flex: 2;
+}
+.info h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #0d6efd;
+  text-align: left;
+}
+.info p {
+  line-height: 1.8;
+  margin-bottom: 16px;
+  font-size: 1.15rem;
+  color: #444;
+}
+
+@media (max-width: 900px) {
+  .container {
+    flex-direction: column;
+    gap: 24px;
+    padding: 20px;
+  }
+  .info h1 {
+    text-align: center;
+  }
+}
+
+body.dark-mode .photo {
+  background: #23232b;
+}
+body.dark-mode .info p {
+  color: #e2e8f0;
+}
+
+.toggle-theme-btn {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 1000;
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s;
+}
+.toggle-theme-btn.dark {
+  background: #222;
+  color: #ffe066;
+}
+
+body.dark-mode {
+  background: #181c24;
+  color: #e3e6ed;
+}
+body.dark-mode .container, body.dark-mode .sobre-mi-card {
+  background: #23283a;
+  color: #e3e6ed;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.25);
+}
+body.dark-mode nav ul {
+  background: #23283a;
+}
+body.dark-mode nav a {
+  color: #b6c2e0;
+}
+body.dark-mode nav a:hover, body.dark-mode nav a:focus {
+  color: #4ea1f7;
+  background: #232f4b;
+  border-radius: 6px;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode th {
+  color: #4ea1f7;
+}
+body.dark-mode input, body.dark-mode textarea {
+  background: #23283a;
+  color: #e3e6ed;
+  border: 1px solid #3a4157;
+}
+body.dark-mode input[type="submit"] {
+  background: #2563eb;
+  color: #fff;
+}
+body.dark-mode input[type="submit"]:hover {
+  background: #4ea1f7;
+}
+body.dark-mode .toggle-theme-btn {
+  background: #23283a;
+  color: #4ea1f7;
+}
+body.dark-mode table {
+  background: #23283a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+body.dark-mode th {
+  background: #22304a;
+  color: #e3e6ed;
+}
+body.dark-mode td {
+  background: #23283a;
+  color: #e3e6ed;
+}
+body.dark-mode tr:not(:first-child):hover td {
+  background: #232f4b;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+}
+th, td {
+  padding: 14px 16px;
+  text-align: center;
+}
+th {
+  background: #0d6efd;
+  color: #fff;
+  font-weight: 600;
+  font-size: 1.1rem;
+}
+td {
+  background: #f8f9fa;
+  color: #333;
+  font-size: 1rem;
+}
+tr:not(:first-child):hover td {
+  background: #e9ecef;
+}
+table, th, td {
+  border: none;
+}
+
+.sobre-mi-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 70vh;
+  background: linear-gradient(120deg, #f8f9fa 60%, #e3e6ed 100%);
+}
+.sobre-mi-card {
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(13, 110, 253, 0.08);
+  padding: 48px 40px;
+  max-width: 950px;
+  width: 100%;
+}
+.sobre-mi-photo {
+  flex: 1;
+  text-align: center;
+  background: transparent;
+  border-radius: 16px;
+  padding: 0;
+  box-shadow: none;
+}
+.sobre-mi-photo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid #4ea1f7;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 16px rgba(13,110,253,0.10);
+}
+.sobre-mi-photo img:hover {
+  transform: scale(1.07) rotate(-2deg);
+  box-shadow: 0 8px 32px rgba(13,110,253,0.18);
+}
+.sobre-mi-info {
+  flex: 2;
+  padding-left: 10px;
+}
+.sobre-mi-info h1 {
+  font-size: 2.3rem;
+  margin-bottom: 18px;
+  color: #0d6efd;
+  text-align: left;
+  letter-spacing: 1px;
+}
+.sobre-mi-info p {
+  line-height: 1.8;
+  margin-bottom: 14px;
+  font-size: 1.13rem;
+  color: #333;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+@media (max-width: 900px) {
+  .sobre-mi-card {
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 10px;
+  }
+  .sobre-mi-info h1 {
+    text-align: center;
+  }
+}
+body.dark-mode .sobre-mi-section {
+  background: linear-gradient(120deg, #181c24 60%, #23283a 100%);
+}
+body.dark-mode .sobre-mi-card {
+  background: #23283a;
+  box-shadow: 0 8px 32px rgba(78,161,247,0.10);
+}
+body.dark-mode .sobre-mi-photo img {
+  border: 4px solid #4ea1f7;
+  box-shadow: 0 2px 16px rgba(78,161,247,0.10);
+}
+body.dark-mode .sobre-mi-photo img:hover {
+  box-shadow: 0 8px 32px rgba(78,161,247,0.18);
+}
+body.dark-mode .sobre-mi-info p {
+  color: #b6c2e0;
+} 
