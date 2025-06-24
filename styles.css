@@ -189,15 +189,15 @@ body.dark-mode .container, body.dark-mode .sobre-mi-card {
   box-shadow: 0 4px 24px rgba(0,0,0,0.25);
 }
 body.dark-mode nav ul {
-  background: #16204a;
-  box-shadow: 0 2px 12px rgba(22,32,74,0.25);
+  background: #22336c;
+  box-shadow: 0 2px 8px rgba(34,51,108,0.18);
 }
 body.dark-mode nav a {
-  color: #e3e6ed;
+  color: #fff;
 }
 body.dark-mode nav a:hover, body.dark-mode nav a:focus {
   background: #4ea1f7;
-  color: #16204a;
+  color: #22336c;
   text-decoration: underline;
 }
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode th {
