@@ -7,25 +7,30 @@ body {
 }
 
 nav ul {
+  background: #22336c;
+  box-shadow: 0 2px 8px rgba(34,51,108,0.10);
+  border-radius: 12px;
+  padding: 12px 0;
+  margin-bottom: 0;
   display: flex;
   list-style: none;
   gap: 15px;
   justify-content: center;
-  padding: 10px;
-  background: #eee;
-  border-radius: 12px;
-  margin-bottom: 0;
 }
 nav a {
+  color: #fff;
   text-decoration: none;
-  color: #0d6efd;
-  padding: 6px 16px;
+  padding: 8px 18px;
   border-radius: 6px;
-  transition: background 0.2s, color 0.2s;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
 }
 nav a:hover, nav a:focus {
-  background: #e3e6ed;
-  color: #2563eb;
+  background: #4ea1f7;
+  color: #22336c;
+  box-shadow: 0 2px 8px rgba(78,161,247,0.10);
+  text-decoration: underline;
 }
 
 .container {
@@ -184,15 +189,16 @@ body.dark-mode .container, body.dark-mode .sobre-mi-card {
   box-shadow: 0 4px 24px rgba(0,0,0,0.25);
 }
 body.dark-mode nav ul {
-  background: #23283a;
+  background: #16204a;
+  box-shadow: 0 2px 12px rgba(22,32,74,0.25);
 }
 body.dark-mode nav a {
-  color: #b6c2e0;
+  color: #e3e6ed;
 }
 body.dark-mode nav a:hover, body.dark-mode nav a:focus {
-  color: #4ea1f7;
-  background: #232f4b;
-  border-radius: 6px;
+  background: #4ea1f7;
+  color: #16204a;
+  text-decoration: underline;
 }
 body.dark-mode h1, body.dark-mode h2, body.dark-mode h3, body.dark-mode th {
   color: #4ea1f7;
